@@ -15,7 +15,6 @@ function App() {
   const math = create(all, config);
   // This is a function that uses math.js module to evaluate the current function on display.
   const handleCalculation = (calc) => {
-    console.log(calc);
     return math.evaluate(calc);
   };
 
@@ -46,6 +45,8 @@ function App() {
     }
   };
 
+  const screenClasses = `screen-element smaller-screen`
+
   return (
     <div className="app">
       <link
@@ -55,8 +56,8 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="screen col-12">
-            <div className="screen-element calculation">{calculation}</div>
-            <div className="screen-element lastClicked">{display}</div>
+            <div className={calculation.length > 6 ? screenClasses : "screen-element"}>{calculation}</div>
+            <div className={display.length > 6 ? screenClasses : "screen-element"}>{display}</div>
           </div>
         </div>
         <div className="buttons-container row">
@@ -145,6 +146,7 @@ function App() {
           </div>
         </div>
       </div>
+      <a className="linkedin" href="https://www.linkedin.com/in/matheus-leopoldo-214104211/"><p>Made by Matheus "mtlpks" Leopoldo - Linkedin</p></a>
     </div>
   );
 }

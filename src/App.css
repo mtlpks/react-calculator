@@ -8,6 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 25px;
 }
 
 .buttons-container {
@@ -34,12 +35,13 @@ body {
 }
 .screen {
     font-family: SF Pro Light;
-    font-size: 7rem;
+    font-size: 6rem;
     color: white;
     padding-right: 0;
     height: 300px;
     width: 410px;
     text-align: right;
+    overflow: hidden;
 }
 
 .screen-element {
@@ -53,6 +55,14 @@ body {
     padding-left: 40px;
 }
 
-/* .number {
-    color: rgb(49, 49, 49);
-} */
+.smaller-screen {
+    font-size: 3rem !important;
+}
+
+.linkedin {
+    font-family: SF Pro Light;
+    font-size: 1.5rem;
+    text-decoration:none;
+    text-align: center;
+    color: white;
+}
